@@ -18,11 +18,7 @@ export default function PersonalQuoteView() {
     !submittedQuote.includes(quote) &&
       setSubmittedQuote([...submittedQuote, quote]);
 
-    const registSuccess = () => {
-      toast.success("Congrats! Quote added succesfully");
-    };
-
-    dispatch(quoteAction.createDataThunk(registSuccess));
+    dispatch(quoteAction.createDataThunk());
   };
   return (
     <section style={{ textAlign: "center", marginTop: "60px" }}>
